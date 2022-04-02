@@ -1,0 +1,11 @@
+### Perguntas sobre execuções do Docker
+
+Por que o container não rodou?
+- Por causa do Comando da imagem que está para executar o bash, ou seja, não possui nenhum processo vivo dentro do container para que ele fique em execução.
+
+O que o docker run fez por baixo dos panos?
+- Ele realizou o Download da Imagem no dockerhub, fez a verificação se é de fato a imagem que estamos procurando e executou o container.
+
+Diferenças entre o Docker Exec e o Docker Run:
+  - O docker run cria um novo container e o executa.
+  - O docker exec permite executar um comando em um container já em execução.

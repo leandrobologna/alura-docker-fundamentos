@@ -1,0 +1,18 @@
+### Perguntas sobre os containers:
+Por que são mais leves?
+- O Container funciona como processo dentro de um SO ou seja ele não aloca recursos como é o caso de uma Virtual Machine.
+
+Como garantem o isolamento?
+- O isolamento ocorre a partir do conceito de Namespaces, que permite que o container tenha níveis de isolamento.
+- Principais Níveis de Isolamento:
+  - PID: Provê isolamento dos processos rodando dentro do container.
+  - NET: Provê isolamento das interfaces de rede.
+  - IPC: Provê isolamento da comunicação entre processos e memória compartilhada.
+  - MNT: Provê isolamento de sistema de arquivos/pontos de montagem.
+  - UTS: Provê isolamento do kernel. Age como se o container fosse outro host.
+
+Como funcionam sem "instalar um SO"?
+- Por causa do namespace do UTS, que faz com que o container tenha acesso ao kernel do sistema original.
+
+Como fica a divisão de recursos do sistema?
+- Por causa do Cgroups que garante que os recursos das máquinas sejam melhores gerenciados.
